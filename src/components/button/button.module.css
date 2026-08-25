@@ -1,0 +1,12 @@
+.button {
+  padding: 0.6rem;
+  background: #e63e7f;
+  width: auto;
+  height: auto;
+  padding: auto;
+  font-size: large;
+  border-radius: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "Crimson Text";
+}

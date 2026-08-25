@@ -1,0 +1,63 @@
+.about {
+    display: flex;
+    margin: 30px;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: start;
+}
+.sectionlabel {
+  padding-right: 20px;
+  writing-mode: vertical-lr;
+  transform: none;
+  text-align: left;
+  display: block;
+  align-self: flex-start;
+  font-family: "Roboto Mono", monospace;
+   letter-spacing: 2px;
+}
+
+.header {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+
+.headline {
+  margin: 20px 0 20px 0;
+  font-family: "Crimson Text";
+  font-weight: 500;
+  font-size: 40px;
+}
+
+
+.bio {
+    font-family: "Crimson Text";
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.toolbox {
+    font-family: "Roboto Mono", monospace ;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.tools {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    gap: 8px;
+
+}
+
+.tool {
+    padding: 5px;
+    border: 1px solid var(--accent);
+    border-radius: 15px;
+    font-family: "Crimson Text";
+}

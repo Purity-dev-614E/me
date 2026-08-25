@@ -1,0 +1,94 @@
+.now {
+  display: flex;
+  margin: 30px;
+  gap: 40px;
+  margin-top: 50px;
+  /* height: 100%; */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  align-items: start;
+}
+
+.sectionLabel {
+  padding-right: 20px;
+  writing-mode: vertical-lr;
+  transform: none;
+  text-align: left;
+  display: block;
+  align-self: flex-start;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 2px;
+}
+
+.heading {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 35px;
+  padding: 25px 0;
+}
+
+.progress {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: "Sora";
+  font-size: medium;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  /* width: 90%; */
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.title {
+  padding-left: 20px;
+  font-family: "Crimson Text";
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.description {
+  text-align: left;
+  padding: 20px;
+  font-family: "Crimson Text";
+}
+
+.entry {
+  margin-top: 15px;
+  display: flex;
+  gap: 50px;
+  margin-right: 30px;
+  height: 150px;
+  align-items: center;
+  border-top: 1px solid #c2c1c1;
+}
+
+.entryDate {
+  width: 200px;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 2px;
+}
+
+.entryText {
+  text-align: left;
+  font-family: "Crimson Text";
+}
+.more {
+  width: fit-content;
+  align-self: center;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #8b8b8b;
+  color: #9b9b9b;
+  font-family: "Crimson Text";
+}

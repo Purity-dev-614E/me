@@ -1,0 +1,7 @@
+export {default as Contact } from "./contact/contact"
+export {default as About } from "./about/about"
+export {default as Featured } from "./featured/featured"
+export {default as Hero } from "./hero/hero"
+// export {default as Journal } from "./journal/journal"
+export {default as Now } from "./now/now"
+export {default as Other } from "./other/other"

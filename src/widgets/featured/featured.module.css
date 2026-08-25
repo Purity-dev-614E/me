@@ -1,0 +1,120 @@
+.main {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+.sectionLabel {
+  padding-left: 20px;
+  writing-mode: vertical-lr;
+  transform: none;
+  text-align: left;
+  display: block;
+  align-self: flex-start;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tag {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  font-weight: 500;
+  /* padding: 25px; */
+}
+
+.title {
+  font-family: "Crimson Text";
+  /* font-size: 40px; */
+}
+
+.description {
+  text-align: left;
+  font-family: "Crimson Text";
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  margin: 15px 0;
+  padding-left: 50px;
+}
+
+.value {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+}
+
+.label {
+  font-family: "Crimson Text";
+}
+
+.stacks {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 20px 0;
+}
+
+.stack {
+    border: 1px solid var(--accent);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-family: "Crimson Text";
+}
+
+.screenshotContainer {
+  position: relative;
+  width: 100%; 
+  height: 400px; 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 100px 0;
+  padding-left: 200px;
+}
+
+.card {
+  position: absolute;
+  margin: 10px 0;
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+
+  z-index: var(--z);
+
+ transform: translateX(calc(var(--i) * 200px))
+           translateY(calc(abs(var(--i)) * 15px))
+           scale(calc(1 - (abs(var(--i)) * 0.08)));
+
+  transition: transform 0.3s ease;
+}
+
+.card p {
+    font-family: "Crimson Text";
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+.screenshot {
+  width: 100%;
+  height: 92%;
+  object-fit: cover; 
+  border-radius: inherit;
+}
+
+.card:hover {
+  transform: translateX(calc(var(--i) * 120px))
+             translateY(calc(abs(var(--i)) * 15px - 10px))
+             scale(1.05);
+  z-index: 999;
+}
+
