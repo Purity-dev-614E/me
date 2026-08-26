@@ -1,12 +1,11 @@
 .main {
   display: flex;
-  /* margin: 30px; */
-  gap: 40px;
-  margin-top: 50px;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .sectionLabel {
-  padding-left: 20px;
+  padding-left: 1.25rem;
   writing-mode: vertical-lr;
   transform: none;
   text-align: left;
@@ -20,53 +19,82 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 100%;
 }
 
 .header {
   color: var(--accent);
   font-family: "Roboto Mono", monospace;
-  font-size: 40px;
-  padding: 25px;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  padding: 1.5rem;
 }
+
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(16px, 2.5vw, 28px); 
   grid-auto-flow: dense;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .featured {
   grid-column: span 2;
-  margin: none;
+  margin: 0;
+  min-width: 0;
+  container-type: inline-size;
+  container-name: card;
 }
 
 .card {
   grid-column: span 1;
   width: 100%;
   box-sizing: border-box;
+  padding-left: 1.25rem;
+  min-width: 0;
+  container-type: inline-size;
+  container-name: card;
 }
 
 .title {
   font-family: "Roboto Mono", monospace;
+  text-align: left;
+   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .description {
   text-align: left;
   font-family: "Crimson Text";
-  padding: 12px;
+  padding: 0.8rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .stackContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 0.6rem;
+  min-width: 0;
 }
 
 .stack {
+  min-width: 0;
+  overflow-wrap: break-word ;
   font-family: "Crimson Text";
   border: 1px solid var(--accent);
-  border-radius: 15px;
-  padding: 0 10px;
+  border-radius: 1rem;
+  padding: 0 0.6rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+@container card (max-width: 180px) {
+  .stackContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

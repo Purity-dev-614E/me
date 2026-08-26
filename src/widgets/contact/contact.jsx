@@ -11,11 +11,10 @@ const contact = () => {
     <View>
       <div className={styles.info}>
         <span className={styles.sectionlabel}>{contactData.sectionLabel}</span>
-
         <div className={styles.info2}>
           <h1 className={styles.eyebrow}>{contactData.eyebrow}</h1>
           <h1 className={styles.title}>{contactData.headline}</h1>
-          <Button link={contactData.callCta.href}>
+          <Button link={contactData.callCta.href} className={styles.btn}>
             {contactData.callCta.label}
           </Button>
         </div>
@@ -35,7 +34,7 @@ const contact = () => {
             </a>
           ))}
         </div>
-      <p className={styles.closing}>{contactData.closing}</p>
+      {/* <p className={styles.closing}>{contactData.closingLine}</p> */}
       </div>
     </View>
   );

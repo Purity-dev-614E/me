@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: start;
   width: 85%;
-  margin-right: 25px;
+  margin-right: 1.2rem;
 }
 .main {
   display: flex;
@@ -13,34 +13,37 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 .name {
   font-family:
     Roboto Mono,
     monospace;
   letter-spacing: 2px;
-  padding-left: 15px;
+  padding-left: 0.6rem;
   font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .navigation {
-  margin-right: 50px;
+  margin-right: 2.5rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .nav {
-  padding: 15px;
+  padding: 0.6rem;
   font-family:
     Roboto Mono,
     monospace;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .mid {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-bottom: 40px;
+  margin-bottom: 1.8rem;
 }
 
 .eyebrow {
@@ -48,29 +51,30 @@
     Roboto Mono,
     monospace;
   color: var(--accent);
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
 }
 
 .headline {
   text-align: left;
   font-family: "Crimson Text";
-  font-size: 50px;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 
 .subtext {
   text-align: left;
   font-family: "Crimson Text";
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .end {
-  width: 300px;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* height: 50px;  */
 }
 .sectionlabel {
-  padding-right: 20px;
+  padding-right: 1rem;
   writing-mode: vertical-lr;
   transform: none;
   text-align: left;
@@ -78,7 +82,8 @@
   align-self: flex-end;
   font-family: "Roboto Mono", monospace;
   letter-spacing: 2px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 .button {
-    font-family: "Crimson Text" ;
+  font-family: "Crimson Text";
 }

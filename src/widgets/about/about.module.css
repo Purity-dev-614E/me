@@ -1,18 +1,17 @@
 .about {
     display: flex;
-    margin: 30px;
-    gap: 40px;
-    margin-top: 50px;
+    margin: 1.8rem;
+    gap: 2rem;
+    margin-top: 2.5rem;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    /* justify-content: start; */
     align-items: start;
 }
 .sectionlabel {
-  padding-right: 20px;
+  padding-right: 1.3rem;
   writing-mode: vertical-lr;
   transform: none;
   text-align: left;
@@ -26,38 +25,41 @@
   color: var(--accent);
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
+  font-size: clamp(1.75rem, 5vw, 3rem);
 }
 
 .headline {
-  margin: 20px 0 20px 0;
+  margin: 1.25rem 0 20px 0;
   font-family: "Crimson Text";
   font-weight: 500;
-  font-size: 40px;
+  font-size: clamp(1.75rem, 5vw, 2rem);
+  text-align: left;
 }
 
 
 .bio {
     font-family: "Crimson Text";
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 1.4rem;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .toolbox {
     font-family: "Roboto Mono", monospace ;
     font-weight: 400;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 1.4rem;
 }
 .tools {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: 14vh 1fr 1fr;
+    gap: 0.6rem;
 
 }
 
 .tool {
-    padding: 5px;
+    padding: 0.3rem;
     border: 1px solid var(--accent);
-    border-radius: 15px;
+    border-radius: 0.9rem;
     font-family: "Crimson Text";
 }

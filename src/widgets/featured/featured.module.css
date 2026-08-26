@@ -1,10 +1,10 @@
 .main {
   display: flex;
-  gap: 40px;
-  margin-top: 50px;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 .sectionLabel {
-  padding-left: 20px;
+  padding-left: 1.25rem;
   writing-mode: vertical-lr;
   transform: none;
   text-align: left;
@@ -23,75 +23,77 @@
 .tag {
   color: var(--accent);
   font-family: "Roboto Mono", monospace;
-  font-size: 25px;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   font-weight: 500;
-  /* padding: 25px; */
 }
 
 .title {
   font-family: "Crimson Text";
-  /* font-size: 40px; */
+  font-size:clamp(1.75rem, 5vw, 3rem) ;
 }
 
 .description {
   text-align: left;
   font-family: "Crimson Text";
-  font-size: 20px;
-  padding: 20px 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: 1.25rem 0;
 }
 
 .stats {
   display: flex;
-  gap: 25px;
-  margin: 15px 0;
-  padding-left: 50px;
+  gap: clamp(0.875rem, 1.5vw, 1rem);
+  margin: 0.6rem 0;
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2rem);
 }
 
 .value {
   color: var(--accent);
   font-family: "Roboto Mono", monospace;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .label {
   font-family: "Crimson Text";
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .stacks {
   display: flex;
   justify-content: space-between;
   width: 40%;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .stack {
     border: 1px solid var(--accent);
-    padding: 5px 20px;
-    border-radius: 20px;
+    padding: 0.3rem 1.25rem;
+    border-radius: 1.25rem;
     font-family: "Crimson Text";
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .screenshotContainer {
   position: relative;
   width: 100%; 
-  height: 400px; 
+  height: 55vh; 
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 100px 0;
-  padding-left: 200px;
+  margin: 14vh 0;
+  padding-left: 28vh;
 }
 
 .card {
   position: absolute;
-  margin: 10px 0;
-  width: 300px;
-  height: 500px;
-  padding: 10px;
+  margin: 0.5rem 0;
+  width: 41vh;
+  height: 68vh;
+  padding: 0.7rem;
 
   z-index: var(--z);
 
- transform: translateX(calc(var(--i) * 200px))
-           translateY(calc(abs(var(--i)) * 15px))
+ transform: translateX(calc(var(--i) * 27vh))
+           translateY(calc(abs(var(--i)) * 1rem))
            scale(calc(1 - (abs(var(--i)) * 0.08)));
 
   transition: transform 0.3s ease;
@@ -99,8 +101,8 @@
 
 .card p {
     font-family: "Crimson Text";
-    font-size: 12px;
-    padding: 5px;
+    font-size: (0.875rem, 1.5vw, 1rem);
+    padding: 0.4rem;
 }
 
 
@@ -112,8 +114,8 @@
 }
 
 .card:hover {
-  transform: translateX(calc(var(--i) * 120px))
-             translateY(calc(abs(var(--i)) * 15px - 10px))
+  transform: translateX(calc(var(--i) * 17vh))
+             translateY(calc(abs(var(--i)) * 1rem - 0.6rem))
              scale(1.05);
   z-index: 999;
 }
