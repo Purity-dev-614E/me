@@ -23,6 +23,11 @@ const about = () => {
               </p>
             ))}
           </div>
+          <div className={styles.experience}>
+            <span className={styles.experienceLabel}>EXPERIENCE SNAPSHOT</span>
+            <div><strong>{aboutData.experience.role}</strong><span>{aboutData.experience.org} · {aboutData.experience.year}</span></div>
+            <p>{aboutData.experience.blurb}</p>
+          </div>
         </div>
       </div>
     </View>

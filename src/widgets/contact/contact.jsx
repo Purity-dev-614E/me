@@ -31,6 +31,7 @@ const contact = () => {
             >
               <Icon size={20} />
               <span className={styles.link}>{link}</span>
+              <span className={styles.arrow} aria-hidden="true">↗</span>
             </a>
           ))}
         </div>

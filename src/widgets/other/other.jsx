@@ -14,13 +14,15 @@ const other = () => {
           {otherProjectsData.sectionLabel}
         </span>
         <div className={styles.content}>
+          <p className={styles.kicker}>{otherProjectsData.projects.length} SELECTED BUILDS</p>
           <h2 className={styles.header}>{otherProjectsData.header}</h2>
           <div className={styles.grid}>
-            {otherProjectsData.projects.map((project) => (
+            {otherProjectsData.projects.map((project, index) => (
               <Card
                 key={project.id}
                 className={project.featured ? styles.featured : styles.card}
               >
+                <span className={styles.projectNumber}>PROJECT {String(index + 1).padStart(2, "0")}</span>
                 <h2 className={styles.title}>{project.name}</h2>
                 <p className={styles.description}>{project.description}</p>
                 <div className={styles.stackContainer}>

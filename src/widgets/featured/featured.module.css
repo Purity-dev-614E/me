@@ -146,3 +146,14 @@
   .card { transition: none; }
 }
 
+.tag { display: inline-flex; align-items: center; gap: 0.5rem; }
+.tag::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #40d98b; box-shadow: 0 0 0 0.25rem rgba(64, 217, 139, 0.12); }
+.projectLink { display: inline-flex; gap: 0.5rem; padding-bottom: 0.2rem; color: var(--accent); border-bottom: 1px solid currentColor; font-family: "Roboto Mono", monospace; font-size: 0.78rem; transition: gap 200ms ease; }
+.projectLink:hover { gap: 0.8rem; }
+
+.sectionLabel { position: relative; color: var(--accent); font-weight: 500; background: linear-gradient(180deg, rgba(230, 62, 127, 0.18), transparent); border: 1px solid rgba(230, 62, 127, 0.32); border-radius: 999px; box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.14); }
+.sectionLabel::before { content: ""; position: absolute; top: 0.35rem; left: 50%; width: 0.3rem; height: 0.3rem; border-radius: 50%; background: #40d98b; box-shadow: 0 0 0 0.18rem rgba(64, 217, 139, 0.13); transform: translateX(-50%); }
+.sectionLabel { padding-top: 0.95rem; padding-bottom: 0.35rem; }
+.sectionLabel { padding-top: 0; padding-bottom: 0; background: none; border: 0; border-radius: 0; box-shadow: none; text-shadow: 0 0 0.8rem rgba(230, 62, 127, 0.65); }
+.sectionLabel::before { display: none; }
+

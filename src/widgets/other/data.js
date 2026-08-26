@@ -24,7 +24,7 @@ export const otherProjectsData = {
   {
     id: "attachment-system",
     name: "Industrial Attachment System",
-    description: "Digitized JKUAT's attachment process end to end, solo build. Now used by the university.",
+    description: "Digitized JKUAT's attachment process end to end, solo build.",
     stack: ["React", "Node.js", "PostgreSQL"],
     link: null,
     featured: false,

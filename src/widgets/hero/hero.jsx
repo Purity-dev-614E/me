@@ -8,7 +8,7 @@ import "@fontsource/crimson-text";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/sora";
 
-const hero = () => {
+const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -39,12 +39,13 @@ const hero = () => {
               <h2 className={styles.eyebrow}>{heroData.eyebrow}</h2>
               <h1 className={styles.headline}>{heroData.headline}</h1>
               <p className={styles.subtext}>{heroData.subtext}</p>
+              <p className={styles.availability}><span aria-hidden="true" /> Available for thoughtful collaborations</p>
             </div>
             <div className={styles.end}>
               <Button> {heroData.primaryCta.label} </Button>
-              <a className={styles.button} href={heroData.secondaryLink.href}>
+              {/* <a className={styles.button} href={heroData.secondaryLink.href}>
                 {heroData.secondaryLink.label}
-              </a>
+              </a> */}
             </div>
           </div>
           <span className={styles.sectionlabel}>{heroData.sectionLabel}</span>
@@ -54,4 +55,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

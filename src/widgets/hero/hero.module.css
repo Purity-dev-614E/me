@@ -27,8 +27,9 @@
   padding-left: 0.6rem;
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--accent);
   border-right: 2px solid var(--accent);
-  animation: type-name 1.4s steps(10, end) 250ms forwards, blink-caret 700ms step-end infinite;
+  animation: type-name 1.4s steps(10, end) 250ms forwards, blink-caret 700ms step-end infinite, name-settle 350ms ease 1.7s forwards;
 }
 
 @keyframes type-name {
@@ -40,9 +41,14 @@
   50% { border-color: transparent; }
 }
 
+@keyframes name-settle {
+  to { color: var(--text-h); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .name {
     width: 14ch;
+    color: var(--text-h);
     animation: none;
   }
 }
@@ -152,3 +158,12 @@
 .button {
   font-family: "Crimson Text";
 }
+
+.availability { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.25rem; color: #a9e8c8; font-family: "Roboto Mono", monospace; font-size: 0.72rem; letter-spacing: 0.04em; }
+.availability span { width: 0.45rem; height: 0.45rem; border-radius: 50%; background: #40d98b; box-shadow: 0 0 0 0.25rem rgba(64, 217, 139, 0.13); }
+
+.sectionlabel { position: relative; color: var(--accent); font-weight: 500; background: linear-gradient(180deg, rgba(230, 62, 127, 0.18), transparent); border: 1px solid rgba(230, 62, 127, 0.32); border-radius: 999px; box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.14); }
+.sectionlabel::before { content: ""; position: absolute; top: 0.35rem; left: 50%; width: 0.3rem; height: 0.3rem; border-radius: 50%; background: #40d98b; box-shadow: 0 0 0 0.18rem rgba(64, 217, 139, 0.13); transform: translateX(-50%); }
+.sectionlabel { padding-top: 0.95rem; padding-bottom: 0.35rem; }
+.sectionlabel { padding-top: 0; padding-bottom: 0; background: none; border: 0; border-radius: 0; box-shadow: none; text-shadow: 0 0 0.8rem rgba(230, 62, 127, 0.65); }
+.sectionlabel::before { display: none; }

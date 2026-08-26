@@ -3,11 +3,12 @@ import styles from "./view.module.css";
 
 const View = ({ children, id }) => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // Start visible so a browser that delays/intercepts observers never shows a blank page.
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section) return undefined;
+    if (!section || !("IntersectionObserver" in window)) return undefined;
 
     const observer = new IntersectionObserver(
       ([entry]) => {

@@ -34,6 +34,7 @@ const featured = () => {
               </span>
             ))}
           </div>
+          <a className={styles.projectLink} href={featuredProjectData.link.href} target="_blank" rel="noopener noreferrer">Visit live project <span aria-hidden="true">↗</span></a>
           <div className={styles.screenshotContainer}>
             {featuredProjectData.screenshots.map((screenshot, i) => {
               const offset =
