@@ -8,7 +8,7 @@ import "@fontsource/sora";
 
 const other = () => {
   return (
-    <View>
+    <View id="skills">
       <div className={styles.main}>
         <span className={styles.sectionLabel}>
           {otherProjectsData.sectionLabel}

@@ -1,11 +1,11 @@
 .shell {
   position: relative;
-  min-height: 75vh;
+  min-height: auto;
   overflow: hidden;
   background: #07081c;
   isolation: isolate;
   border: none;
-  margin: 1.25rem ;
+  margin: 0.75rem;
   border-radius: 15px;
   box-shadow: 5px 10px 8px #272727;
   width: auto;
@@ -15,7 +15,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding: 1rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -87,5 +87,12 @@
 
   .contentlayer {
     padding: 40px; 
+  }
+}
+
+@media (min-width: 48rem) {
+  .shell {
+    margin: 1.25rem;
+    min-height: 60vh;
   }
 }

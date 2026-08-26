@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./view.module.css";
 
-const View = ({ children }) => {
+const View = ({ children, id }) => {
   return (
-    <div className={styles.shell}>
+    <section className={styles.shell} id={id}>
       <div className={`${styles.blob} ${styles.blob1}`}></div>
       <div className={`${styles.blob} ${styles.blob2}`}></div>
       <div className={`${styles.blob} ${styles.blob3}`}></div>
@@ -11,7 +11,7 @@ const View = ({ children }) => {
       <div className={styles.contentlayer}>
         {children}
       </div>
-    </div>
+    </section>
   );
 };
 

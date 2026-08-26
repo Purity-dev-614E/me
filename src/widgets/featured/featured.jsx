@@ -8,7 +8,7 @@ import { featuredProjectData } from "./data";
 
 const featured = () => {
   return (
-    <View>
+    <View id="work">
       <div className={styles.main}>
         <span className={styles.sectionLabel}>
           {featuredProjectData.sectionLabel}

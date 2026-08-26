@@ -7,7 +7,7 @@ import "@fontsource/roboto-mono/400.css";
 
 const about = () => {
   return (
-    <View>
+    <View id="about">
       <div className={styles.about}>
         <span className={styles.sectionlabel}>{aboutData.sectionLabel}</span>
         <div className={styles.content}>

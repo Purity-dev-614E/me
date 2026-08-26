@@ -2,21 +2,24 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 85%;
-  margin-right: 1.2rem;
+  width: 100%;
 }
 .main {
   display: flex;
 }
 .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
   width: 100%;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 .name {
+  display: inline-block;
+  width: 0;
+  max-width: 14ch;
+  overflow: hidden;
+  white-space: nowrap;
   font-family:
     Roboto Mono,
     monospace;
@@ -24,15 +27,36 @@
   padding-left: 0.6rem;
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.25rem);
+  border-right: 2px solid var(--accent);
+  animation: type-name 1.4s steps(10, end) 250ms forwards, blink-caret 700ms step-end infinite;
+}
+
+@keyframes type-name {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name {
+    width: 14ch;
+    animation: none;
+  }
 }
 
 .navigation {
-  margin-right: 2.5rem;
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
   font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 .nav {
-  padding: 0.6rem;
+  padding: 0.5rem;
   font-family:
     Roboto Mono,
     monospace;
@@ -67,22 +91,63 @@
 }
 
 .end {
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* height: 50px;  */
 }
 .sectionlabel {
-  padding-right: 1rem;
-  writing-mode: vertical-lr;
-  transform: none;
   text-align: left;
   display: block;
+  flex: 0 0 auto;
+  padding-right: 0.35rem;
+  writing-mode: vertical-lr;
   align-self: flex-end;
   font-family: "Roboto Mono", monospace;
-  letter-spacing: 2px;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+.navigationOpen {
+  display: flex;
+}
+
+.menuToggle {
+  position: absolute;
+  top: 2.15rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  color: var(--text-h);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 48rem) {
+  .top {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  .navigation { justify-content: flex-end; }
+  .navigation { display: flex; }
+  .menuToggle { display: none; }
+  .main { gap: 2rem; }
+  .content { width: 85%; }
+  .end { width: min(100%, 22rem); }
+  .sectionlabel {
+    display: block;
+    padding-right: 1rem;
+    writing-mode: vertical-lr;
+    align-self: flex-end;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    letter-spacing: 2px;
+  }
 }
 .button {
   font-family: "Crimson Text";

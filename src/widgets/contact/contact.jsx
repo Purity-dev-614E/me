@@ -8,7 +8,7 @@ import "@fontsource/crimson-text";
 
 const contact = () => {
   return (
-    <View>
+    <View id="contact">
       <div className={styles.info}>
         <span className={styles.sectionlabel}>{contactData.sectionLabel}</span>
         <div className={styles.info2}>

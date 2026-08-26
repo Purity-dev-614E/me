@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button, View } from "../../components";
 import styles from "./hero.module.css";
 import { heroData } from "./data";
@@ -8,18 +9,29 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/sora";
 
 const hero = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
       <View>
         <div className={styles.top}>
           <span className={styles.name}>{site.shortName}</span>
-          <div className={styles.navigation}>
+          <button
+            className={styles.menuToggle}
+            type="button"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
+          <nav className={`${styles.navigation} ${menuOpen ? styles.navigationOpen : ""}`} aria-label="Main navigation">
             {site.nav.map((nav, i) => (
-              <a className={styles.nav} key={i} href={nav.href}>
+              <a className={styles.nav} key={i} href={nav.href} onClick={() => setMenuOpen(false)}>
                 {nav.label} 
               </a>
             ))}
-          </div>
+          </nav>
         </div>
         <div className={styles.main}>
           <div className={styles.content}>

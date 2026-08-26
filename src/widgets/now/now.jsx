@@ -8,7 +8,7 @@ import "@fontsource/sora";
 
 const now = () => {
   return (
-    <View>
+    <View id="rn">
       <div className={styles.now}>
         <span className={styles.sectionLabel}>{RightNowData.sectionLabel}</span>
         <div className={styles.content}>

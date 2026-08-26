@@ -1,25 +1,28 @@
 .info {
-  padding-top: 3rem;
+  padding-top: 1rem;
   display: flex;
-  flex-direction: row;
+  gap: 0.75rem;
 }
 .info2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-width: 0;
 
 }
 
 .sectionlabel {
-  padding-left: 1.25rem;
+  flex: 0 0 auto;
+  padding-left: 0.35rem;
   writing-mode: vertical-lr;
   transform: none;
   text-align: left;
   display: block;
   align-self: flex-start;
   font-family: "Roboto Mono", monospace;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
 }
 
 .eyebrow {
@@ -40,7 +43,7 @@
 }
 
 .contact {
-  margin-left: 14vh;
+  margin: 2rem 0 0;
   text-align: left;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
@@ -67,6 +70,12 @@
   font-family: "Crimson Text";
   color: white;
   font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+@media (min-width: 48rem) {
+  .info { padding-top: 3rem; }
+  .sectionlabel { padding-left: 1.25rem; font-size: 1rem; letter-spacing: 2px; }
+  .contact { margin-left: 14vh; }
 }
 
 .closing {
