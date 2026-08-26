@@ -29,12 +29,4 @@ export const otherProjectsData = {
     link: null,
     featured: false,
   },
-   {
-    id: "kikao-home",
-    name: "KIKAO Homes",
-    description: "QR-based visitor access with real-time notifications and OTP.",
-    stack: ["Flutter", "Firebase"],
-    link: null,
-    featured: false,
-  },
 ]};
