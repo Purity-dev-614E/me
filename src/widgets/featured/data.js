@@ -17,5 +17,5 @@ export const featuredProjectData = {
     { src: "/screenshots/screenshot3.jpeg", alt: "Safari  group mngmt" },
     { src: "/screenshots/screenshot4.jpeg", alt: "Safari  sign up" },
   ],
-  link: { label: "https://churchconnect-ashen.vercel.app/", href: "https://churchconnect-ashen.vercel.app/" },
+  link: { label: "safariconnect.org", href: "https://churchconnect-ashen.vercel.app/" },
 };
