@@ -13,4 +13,21 @@
   justify-content: center;
   min-height: 2.75rem;
   text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.button:hover {
+  transform: translateY(-0.15rem);
+  background: #f05290;
+  box-shadow: 0 0.5rem 1rem rgba(230, 62, 127, 0.3);
+}
+
+.button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .button:hover { transform: none; }
 }
