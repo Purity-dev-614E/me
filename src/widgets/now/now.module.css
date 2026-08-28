@@ -107,6 +107,7 @@
 .entryText {
   text-align: left;
   font-family: "Crimson Text";
+  white-space: pre-wrap;
 }
 .more {
   width: fit-content;
