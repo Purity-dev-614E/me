@@ -1,16 +1,97 @@
-.panel { max-width: 42rem; margin: 2rem auto; text-align: left; }
-.panel h1 { text-align: left; margin: 0.4rem 0; }
-.back, .signout { display: inline-flex; align-items: center; gap: 0.4rem; font-family: "Roboto Mono", monospace; font-size: 0.85rem; }
-.top { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; }
-.eyebrow, .message { color: var(--accent); font-family: "Roboto Mono", monospace; font-size: 0.8rem; }
-.form { display: grid; gap: 1rem; margin: 1.5rem 0; }
-.form label { display: grid; gap: 0.4rem; font-family: "Roboto Mono", monospace; font-size: 0.85rem; }
-.form input:not([type="checkbox"]), .form textarea, .form select { width: 100%; padding: 0.7rem; color: var(--text-h); background: var(--code-bg); border: 1px solid var(--border); border-radius: 0.4rem; font: inherit; }
-.form textarea { resize: vertical; }
-.checkbox { display: flex !important; align-items: center; }
-.form button, .status, .signout { width: fit-content; padding: 0.65rem 1rem; color: #fff; background: var(--accent); border: 0; border-radius: 0.4rem; font: inherit; cursor: pointer; }
-.signout, .status { background: transparent; color: var(--text-h); border: 1px solid var(--border); }
-.entries { border-top: 1px solid var(--border); }
-.entries article { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); text-align: left; }
-.entries time { color: var(--accent); font-family: "Roboto Mono", monospace; font-size: 0.75rem; }
-.entries p { margin-top: 0.4rem; font-family: "Crimson Text", serif; }
+.panel {
+  max-width: 42rem;
+  margin: 2rem auto;
+  text-align: left;
+}
+.panel h1 {
+  text-align: left;
+  margin: 0.4rem 0;
+}
+.back,
+.signout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.eyebrow,
+.message {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8rem;
+}
+.form {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.form label {
+  display: grid;
+  gap: 0.4rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
+}
+.form input:not([type="checkbox"]),
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 0.7rem;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  font: inherit;
+}
+.form textarea {
+  resize: vertical;
+}
+.checkbox {
+  display: flex !important;
+  align-items: center;
+}
+.form button,
+.status,
+.signout {
+  width: fit-content;
+  padding: 0.65rem 1rem;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 0.4rem;
+  font: inherit;
+  cursor: pointer;
+}
+.signout,
+.status {
+  background: transparent;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
+.entries {
+  border-top: 1px solid var(--border);
+}
+.entries article {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: pre-wrap;
+}
+.entries time {
+  color: var(--accent);
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
+}
+.entries p {
+  margin-top: 0.4rem;
+  font-family: "Crimson Text", serif;
+}
